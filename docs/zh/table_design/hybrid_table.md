@@ -39,7 +39,7 @@ import Beta from '../_assets/commonMarkdown/_beta.mdx'
    ADMIN SET FRONTEND CONFIG ("enable_experimental_rowstore" = "true");
    ```
 
-2. 在创建表时在`PROPERTIES`中指定`"STORE_TYPE" = "column_with_row"`。
+2. 在创建表时在`PROPERTIES`中指定`"storage_type" = "column_with_row"`。
 
 :::note
 
@@ -58,7 +58,7 @@ CREATE TABLE users (
 )
 PRIMARY KEY (id)
 DISTRIBUTED by HASH (id)
-PROPERTIES ("store_type" = "column_with_row");
+PROPERTIES ("storage_type" = "column_with_row");
 ```
 
 ### 插入、删除和更新数据
