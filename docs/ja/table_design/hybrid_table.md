@@ -39,7 +39,7 @@ OLAP データベースとして、StarRocks は元々列指向（カラムナ�
    ADMIN SET FRONTEND CONFIG ("enable_experimental_rowstore" = "true");
    ```
 
-2. テーブル作成時に `PROPERTIES` に `"STORE_TYPE" = "column_with_row"` を指定します。
+2. テーブル作成時に `PROPERTIES` に `"storage_type" = "column_with_row"` を指定します。
 
 :::note
 
@@ -58,7 +58,7 @@ CREATE TABLE users (
 )
 PRIMARY KEY (id)
 DISTRIBUTED by HASH (id)
-PROPERTIES ("store_type" = "column_with_row");
+PROPERTIES ("storage_type" = "column_with_row");
 ```
 
 ### データの挿入、削除、更新
