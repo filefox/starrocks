@@ -40,7 +40,7 @@ As an OLAP database, StarRocks originally stores data in the columnar storage, w
    ADMIN SET FRONTEND CONFIG ("enable_experimental_rowstore" = "true");
    ```
 
-2. Specify `"STORE_TYPE" = "column_with_row"` in the `PROPERTIES` at table creation.
+2. Specify `"storage_type" = "column_with_row"` in the `PROPERTIES` at table creation.
 
 :::note
 
@@ -59,7 +59,7 @@ CREATE TABLE users (
 )
 PRIMARY KEY (id)
 DISTRIBUTED by HASH (id)
-PROPERTIES ("store_type" = "column_with_row");
+PROPERTIES ("storage_type" = "column_with_row");
 ```
 
 ### Insert, delete, and update data
